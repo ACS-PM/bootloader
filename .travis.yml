@@ -1,0 +1,23 @@
+language: c
+
+addons:
+  apt:
+    packages:
+    - gcc-avr
+    - avr-libc
+
+env:
+  - BOARD=atmega328
+  - BOARD=atmega328_notp
+  - BOARD=atmega328_pro8
+  - BOARD=diecimila
+  - BOARD=lilypad
+  - BOARD=lilypad_resonator
+  - BORAD=mega
+  - BOARD=ng
+  - BOARD=pm
+  - BOARD=pro8
+  - BOARD=pro16
+  - BOARD=pro20
+
+script: make $BOARD
